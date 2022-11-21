@@ -1,0 +1,113 @@
+@import "./mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  .form-div {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    @include box-shadow;
+
+    button {
+      @include button;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #0096bb;
+        border-color: #0096bb;
+      }
+      &:active {
+        background-color: #34d6ff;
+        border-color: #34d6ff;
+      }
+    }
+
+    .label {
+      margin-top: 20px;
+    }
+
+    input {
+      border-radius: 5px;
+      border: 1px solid gray;
+      width: 200px;
+      height: 25px;
+      text-align: center;
+    }
+
+    .to-login {
+      margin-top: 20px;
+    }
+    .email-div,
+    .pass-div,
+    .name-div {
+      @include inf-div;
+    }
+  }
+}
+
+.inf-div {
+  //background-color: aqua;
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00bbeb;
+  height: 60px;
+
+  h1 {
+    margin-left: 20px;
+    font-size: 35px;
+    color: white;
+  }
+
+  .links-div {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+
+    button {
+      background: none;
+      border: none;
+      width: 100px;
+      color: rgba(255, 255, 255, 0.76);
+      font-weight: bold;
+      font-size: 20px;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+
+      &:active {
+        color: rgb(202, 202, 202);
+      }
+    }
+  }
+}

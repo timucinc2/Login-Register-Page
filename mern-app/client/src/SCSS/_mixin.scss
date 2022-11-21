@@ -1,0 +1,26 @@
+@mixin inf-div {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+
+  label {
+    align-self: flex-start;
+  }
+}
+
+@mixin button {
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #00bbeb;
+  border-radius: 10px;
+  background: none;
+  background-color: #00bbeb;
+  color: white;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 0px 0px 44px -7px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0px 0px 44px -7px rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 0px 44px -7px rgba(0, 0, 0, 0.44);
+}
